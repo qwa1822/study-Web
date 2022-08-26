@@ -3,7 +3,7 @@ const fullNames = [{first: 'Albus', last: 'Dumbledore'}, {first: 'Harry', last: 
 
 
 
-const title=fullNames.map(function(fullname)
+const firstNames=fullNames.map(function(fullname)
 {
   return fullname.first;
 })
