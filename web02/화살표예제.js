@@ -1,4 +1,4 @@
 
 const greet=(x)=>{
-  return `Hey ${x}`
+  return `Hey ${x}!`
 }
