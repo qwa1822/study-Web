@@ -34,6 +34,6 @@ button.addEventListener("click",function()
 
 
 button2.addEventListener("click",function(){
-  
+  console.log("goodbye");
 })
 
