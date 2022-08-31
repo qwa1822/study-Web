@@ -2,27 +2,23 @@
 
 const calculator={
   add:function(a,b){
-    console.log(a+b);
+    return a+b;
   },
   minus:function(a,b)
   {
-    console.log(a-b);
+    return a-b;
   },
   divide:function(a,b){
-    console.log(a/b);
+    return a/b;
   },
   multi:function(a,b)
   {
-    console.log(a*b);
+    return a*b;
   },
   power:function(a,b)
   {
-    console.log(a**b);
+    return a**b;
   },
 };
 
-calculator.add(5,1)
-calculator.minus(3,2);
-calculator.divide(4,7);
-calculator.multi(5,2);
-calculator.power(2,8);
+console.log(calculator.add(2,3));
