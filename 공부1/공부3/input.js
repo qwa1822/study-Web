@@ -1,40 +1,31 @@
-const logininput=document.querySelector("#login-form input");
-const loginform=document.querySelector("#login-form");
+const uservalue=document.querySelector("#greeing");
+const form=document.querySelector("#login-form input");
+
+const classListadd="hidden";
+function change(event){
+  event.preventDefualt();
+  const usercc=form.value;
+  form.classList.add(classListadd);
+
+  localStorage.setItem("username",usercc);
+
+  getgreeting(usercc);
+  
+}
+
+function getgreeting(uservalue){
+  uservalue.innerText=`Hello ${uservalue}`;
+  uservalue.classList.remove(classListadd);
+}
+
+const check=localStorage.getItem("username");
 
 
-const greeting=document.querySelector("#greeing");
-const USER_KEY="username";
-const classKey="hidden";
-function show(event)
+if(check===null)
 {
-  event.preventDefault();
-  const username=logininput.value;
-  loginform.classList.add(classKey);
-  
-
-  localStorage.setItem(USER_KEY,username);
-  
-
-
-  greetingTest(username);
-
-
+  form.classList.remove(classListadd);
+  form.addEventListener("submit",change)
 }
-
-
-function greetingTest(username){
-  greeting.innerText=`Hello ${username}`;
-  greeting.classList.remove(classKey);
-}
-
-
-
-const change2=localStorage.getItem(USER_KEY);
-
-
-if(change2===null){
-  loginform.classList.remove(classKey);
-  loginform.addEventListener("submit",show);
-}else{
-  greetingTest();
+else{
+  getgreeting();
 }
