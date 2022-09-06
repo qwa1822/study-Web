@@ -40,5 +40,7 @@ searchMoviesAPI('amadeus',()=>{
       //if it works,run this:
   },()=>{
         //if it doesn't work, run this:
-  })
+},()=>{
+  //If API is down, or request failed
+})
 })
